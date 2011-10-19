@@ -17,7 +17,19 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'responders'
+gem 'formtastic'
+gem 'show_for'
+
+# Prime Enterprise domain specific gems
+# ==================================================
 gem 'high_voltage'
+gem 'aasm'
+gem 'sentient_user'
+gem 'stonepath'
+
+# ==================================================
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -34,6 +46,8 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'cucumber-rails'
+  gem 'therubyracer'
+  gem 'mongrel', '1.2.0.pre2'
 end
 
 
