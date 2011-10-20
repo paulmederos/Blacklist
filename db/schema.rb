@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111020190949) do
+ActiveRecord::Schema.define(:version => 20111020200357) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,29 @@ ActiveRecord::Schema.define(:version => 20111020190949) do
     t.integer  "user_id"
     t.date     "grace_period_ends_at"
     t.text     "story"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_records", :force => true do |t|
+    t.integer  "auditable_id"
+    t.string   "auditable_type"
+    t.string   "event_name"
+    t.string   "old_state_name"
+    t.string   "new_state_name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "aasm_state"
+    t.integer  "workitem_id"
+    t.string   "workitem_type"
+    t.integer  "workbench_id"
+    t.string   "workbench_type"
+    t.datetime "due_at"
+    t.datetime "completed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
