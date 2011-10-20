@@ -1,0 +1,29 @@
+<h1>Listing complaints</h1>
+
+<table>
+  <tr>
+    <th>Aasm state</th>
+    <th>Business</th>
+    <th>User</th>
+    <th>Grace period ends at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @complaints.each do |complaint| %>
+  <tr>
+    <td><%= complaint.aasm_state %></td>
+    <td><%= complaint.business_id %></td>
+    <td><%= complaint.user_id %></td>
+    <td><%= complaint.grace_period_ends_at %></td>
+    <td><%= link_to 'Show', complaint %></td>
+    <td><%= link_to 'Edit', edit_complaint_path(complaint) %></td>
+    <td><%= link_to 'Destroy', complaint, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Complaint', new_complaint_path %>

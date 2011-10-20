@@ -1,0 +1,9 @@
+<%= show_for @complaint do |s| %>
+  <%= s.attribute :aasm_state %>
+  <%= s.attribute :business_id %>
+  <%= s.attribute :user_id %>
+  <%= s.attribute :grace_period_ends_at %>
+<% end %>
+
+<%= link_to 'Edit', edit_complaint_path(@complaint) %> |
+<%= link_to 'Back', complaints_path %>

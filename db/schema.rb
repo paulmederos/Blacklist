@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111019204831) do
+ActiveRecord::Schema.define(:version => 20111020190949) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(:version => 20111019204831) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "complaints", :force => true do |t|
+    t.string   "aasm_state"
+    t.integer  "business_id"
+    t.integer  "user_id"
+    t.date     "grace_period_ends_at"
+    t.text     "story"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

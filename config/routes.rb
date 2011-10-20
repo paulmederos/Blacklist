@@ -1,4 +1,6 @@
 PrimeEnterprise::Application.routes.draw do
+  resources :complaints
+
   resources :businesses
 
   # The priority is based upon order of creation:
