@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Business do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many(:complaints) }
+  it { should validate_presence_of(:name) }
 end

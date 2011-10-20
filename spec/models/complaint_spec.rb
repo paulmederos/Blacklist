@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Complaint do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to(:business) }
+  it { should validate_presence_of(:story) }
 end
