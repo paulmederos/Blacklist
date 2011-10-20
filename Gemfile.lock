@@ -62,11 +62,17 @@ GEM
       capybara (>= 1.1.1)
       cucumber (>= 1.1.0)
       nokogiri (>= 1.5.0)
+    daemons (1.0.10)
+    delegate_presenter (0.0.1)
+      rails
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.2.9)
       multi_json (~> 1.0)
     ffi (1.0.9)
+    formtastic (2.0.2)
+      rails (~> 3.0)
+    gem_plugin (0.2.3)
     gherkin (2.5.3)
       json (>= 1.4.6)
     high_voltage (1.0.1)
@@ -85,6 +91,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mongrel (1.2.0.pre2)
+      daemons (~> 1.0.10)
+      gem_plugin (~> 0.2.3)
     multi_json (1.0.3)
     nokogiri (1.5.0)
     polyglot (0.3.2)
@@ -153,6 +162,7 @@ GEM
       json_pure
       rubyzip
     sentient_user (0.3.2)
+    show_for (0.2.4)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -187,14 +197,18 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   cucumber
   cucumber-rails
+  delegate_presenter
+  formtastic
   high_voltage
   jquery-rails
+  mongrel (= 1.2.0.pre2)
   rails (= 3.1.1)
   responders
   rspec-rails
   ruby-debug19
   sass-rails (~> 3.1.4)
   sentient_user
+  show_for
   sqlite3
   stonepath
   therubyracer

@@ -27,6 +27,7 @@ gem 'high_voltage'
 gem 'aasm'
 gem 'sentient_user'
 gem 'stonepath'
+gem 'delegate_presenter'
 
 # ==================================================
 
