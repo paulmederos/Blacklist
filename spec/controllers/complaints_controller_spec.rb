@@ -24,7 +24,7 @@ describe ComplaintsController do
   # Complaint. As you add validations to Complaint, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {story: "My coffee was too cold"}
   end
 
   describe "GET index" do
