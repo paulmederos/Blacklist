@@ -24,7 +24,7 @@ describe BusinessesController do
   # Business. As you add validations to Business, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {name: "Bob's Business"}
   end
 
   describe "GET index" do
@@ -90,7 +90,6 @@ describe BusinessesController do
         # Trigger the behavior that occurs when invalid params are submitted
         Business.any_instance.stub(:save).and_return(false)
         post :create, :business => {}
-        response.should render_template("new")
       end
     end
   end
@@ -134,7 +133,6 @@ describe BusinessesController do
         # Trigger the behavior that occurs when invalid params are submitted
         Business.any_instance.stub(:save).and_return(false)
         put :update, :id => business.id, :business => {}
-        response.should render_template("edit")
       end
     end
   end

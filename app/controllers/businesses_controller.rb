@@ -1,5 +1,6 @@
 class BusinessesController < ApplicationController
   helper_method :business
+
   respond_to :html, :json, :xml
 
 
@@ -15,8 +16,7 @@ class BusinessesController < ApplicationController
 
 
   def new
-    @business = Business.new
-    respond_with(@business)
+    respond_with( business )
   end
 
 
@@ -50,6 +50,14 @@ class BusinessesController < ApplicationController
 protected
 
   def business
-    @business ||= Business.find(params[:id])
+    return @business if @business
+
+    if params[:id]
+      @business = Business.find(params[:id])
+    else
+      @business = Business.new
+    end
+
+    @business
   end
 end
