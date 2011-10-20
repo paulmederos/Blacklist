@@ -163,6 +163,7 @@ GEM
       json_pure
       rubyzip
     sentient_user (0.3.2)
+    shoulda-matchers (1.0.0.beta3)
     show_for (0.2.4)
     sprockets (2.0.3)
       hike (~> 1.2)
@@ -210,6 +211,7 @@ DEPENDENCIES
   ruby-debug19
   sass-rails (~> 3.1.4)
   sentient_user
+  shoulda-matchers
   show_for
   sqlite3
   stonepath
