@@ -63,18 +63,19 @@ GEM
       cucumber (>= 1.1.0)
       nokogiri (>= 1.5.0)
     daemons (1.0.10)
-    delegate_presenter (0.0.1)
+    delegate_presenter (0.0.2)
       rails
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.2.9)
       multi_json (~> 1.0)
-    ffi (1.0.9)
+    ffi (1.0.10)
     formtastic (2.0.2)
       rails (~> 3.0)
     gem_plugin (0.2.3)
-    gherkin (2.5.3)
+    gherkin (2.5.4)
       json (>= 1.4.6)
+    haml (3.1.3)
     high_voltage (1.0.1)
     hike (1.2.1)
     i18n (0.6.0)
@@ -129,7 +130,7 @@ GEM
       rspec-core (~> 2.7.0)
       rspec-expectations (~> 2.7.0)
       rspec-mocks (~> 2.7.0)
-    rspec-core (2.7.0)
+    rspec-core (2.7.1)
     rspec-expectations (2.7.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.7.0)
@@ -199,6 +200,7 @@ DEPENDENCIES
   cucumber-rails
   delegate_presenter
   formtastic
+  haml
   high_voltage
   jquery-rails
   mongrel (= 1.2.0.pre2)

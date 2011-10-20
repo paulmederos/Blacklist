@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'responders'
 gem 'formtastic'
 gem 'show_for'
+gem 'haml'
 
 # Prime Enterprise domain specific gems
 # ==================================================
