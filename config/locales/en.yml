@@ -3,3 +3,13 @@
 
 en:
   hello: "Hello world"
+  complaints:
+    index: Complaints
+    edit: "Edit Your Complaint"
+    show: "See Your Complaint"
+
+  businesses:
+    index: Businesses
+    edit: "Edit Business Information"
+    show: "See the businesses history"
+

@@ -6,6 +6,7 @@ module ApplicationHelper
   end
 
   def title_or_default
-    @title_override || "#{controller.controller_name.titleize}"
+    logger.info "LOCALIZATION: looking for #{controller.controller_name}.#{controller.action_name}"
+    t "#{controller.controller_name}.#{controller.action_name}"
   end
 end
