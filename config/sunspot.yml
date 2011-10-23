@@ -1,0 +1,16 @@
+# Notice there is no production setting. Websolr + Heroku addon should take care
+# of that for us, I think WD-rpw 06-29-2011
+
+development:
+  solr:
+    hostname: localhost
+    port: 8982
+    log_level: INFO
+    log_level: DEBUG
+    auto_commit_after_request: true
+
+test:
+  solr:
+    hostname: localhost
+    port: 8981
+    log_level: OFF
