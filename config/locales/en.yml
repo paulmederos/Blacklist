@@ -12,4 +12,6 @@ en:
     index: Businesses
     edit: "Edit Business Information"
     show: "See the businesses history"
+    can_not_find: "or, if you can't find the business"
+    add_new: "add it here"
 
