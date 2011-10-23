@@ -12,28 +12,21 @@
 
 <h1>Listing businesses</h1>
 
+<div class="search_results">
+<ul>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Street address</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip</th>
-    <th></th>
-  </tr>
-
-<% @businesses.each do |business| %>
-  <tr>
-    <td><%= business.name %></td>
-    <td><%= business.street_address %></td>
-    <td><%= business.city %></td>
-    <td><%= business.state %></td>
-    <td><%= business.zip %></td>
-    <td><%= link_to 'Show', business %></td>
-  </tr>
+<% @businesses.each do |business_object| %>
+  <% business = Present(business_object) -%>
+  <li>
+    <div class="result">
+      <b><%= business.name -%></b><br /><%= business.full_address -%>
+      <%= business.complaint_button -%>
+      <br/><%= link_to 'More Information', business %>
+    </div>
+  </li>
 <% end %>
-</table>
+</ul>
+</div>
 
 <br />
 
