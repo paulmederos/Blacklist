@@ -1,4 +1,17 @@
+<% content_for :header_text do %>
+  <h1>File a complaint</h1>
+  <p>We strive to empower the customer to force a response from businesses.</p>
+
+  <%= form_tag(businesses_path, :method => :get)  do |f| -%>
+  <%= search_field_tag :search, params[:search] -%>
+  <%= submit_tag "Search" -%>
+<%- end -%>
+
+<% end %>
+
+
 <h1>Listing businesses</h1>
+
 
 <table>
   <tr>
@@ -7,8 +20,6 @@
     <th>City</th>
     <th>State</th>
     <th>Zip</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -20,12 +31,10 @@
     <td><%= business.state %></td>
     <td><%= business.zip %></td>
     <td><%= link_to 'Show', business %></td>
-    <td><%= link_to 'Edit', edit_business_path(business) %></td>
-    <td><%= link_to 'Destroy', business, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Business', new_business_path %>
+<p><%= t("businesses.can_not_find") -%> <%= link_to t("businesses.add_new"), new_business_path %></p>

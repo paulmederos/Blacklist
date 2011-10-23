@@ -5,7 +5,13 @@ class BusinessesController < ApplicationController
 
 
   def index
-    @businesses = Business.all
+    if params[:search]
+      @businesses = Business.search {
+        keywords params[:search]
+      }.results
+    else
+      @businesses = Business.all
+    end
     respond_with @businesses
   end
 
