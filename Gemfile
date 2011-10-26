@@ -22,6 +22,7 @@ gem 'formtastic'
 gem 'show_for'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
+gem 'kumade'
 
 # Prime Enterprise domain specific gems
 # ==================================================
