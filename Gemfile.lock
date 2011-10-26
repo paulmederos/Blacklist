@@ -1,6 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    aasm (2.3.1)
+      activerecord
     actionmailer (3.1.1)
       actionpack (= 3.1.1)
       mail (~> 2.3.0)
@@ -29,6 +31,7 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    addressable (2.2.6)
     ansi (1.3.0)
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
@@ -42,6 +45,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.2.2)
       ffi (~> 1.0.6)
+    cocaine (0.2.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -60,13 +64,27 @@ GEM
       capybara (>= 1.1.1)
       cucumber (>= 1.1.0)
       nokogiri (>= 1.5.0)
+    daemons (1.0.10)
+    delegate_presenter (0.0.2)
+      rails
     diff-lcs (1.1.3)
     erubis (2.7.0)
+    escape (0.0.4)
     execjs (1.2.9)
       multi_json (~> 1.0)
-    ffi (1.0.9)
-    gherkin (2.5.3)
+    ffi (1.0.10)
+    formtastic (2.0.2)
+      rails (~> 3.0)
+    gem_plugin (0.2.3)
+    gherkin (2.5.4)
       json (>= 1.4.6)
+    haml (3.1.3)
+    heroku (2.11.0)
+      launchy (>= 0.3.2)
+      rest-client (~> 1.6.1)
+      rubyzip
+      term-ansicolor (~> 1.0.5)
+    high_voltage (1.0.1)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.16)
@@ -74,6 +92,18 @@ GEM
       thor (~> 0.14)
     json (1.6.1)
     json_pure (1.6.1)
+    kumade (0.8.0)
+      cocaine (>= 0.2.0)
+      heroku (~> 2.0)
+      rake (>= 0.8.7)
+    launchy (2.0.5)
+      addressable (~> 2.2.6)
+    less (2.0.7)
+      therubyracer (~> 0.9.2)
+    less-rails (2.0.2)
+      actionpack (~> 3.1.1)
+      less (~> 2.0.7)
+    libv8 (3.3.10.2)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
     mail (2.3.0)
@@ -81,9 +111,13 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mongrel (1.2.0.pre2)
+      daemons (~> 1.0.10)
+      gem_plugin (~> 0.2.3)
     multi_json (1.0.3)
     nokogiri (1.5.0)
     polyglot (0.3.2)
+    pr_geohash (1.0.0)
     rack (1.3.5)
     rack-cache (1.1)
       rack (>= 0.4)
@@ -111,11 +145,16 @@ GEM
     rake (0.9.2)
     rdoc (3.11)
       json (~> 1.4)
+    responders (0.6.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rsolr (0.12.1)
+      builder (>= 2.1.2)
     rspec (2.7.0)
       rspec-core (~> 2.7.0)
       rspec-expectations (~> 2.7.0)
       rspec-mocks (~> 2.7.0)
-    rspec-core (2.7.0)
+    rspec-core (2.7.1)
     rspec-expectations (2.7.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.7.0)
@@ -135,24 +174,33 @@ GEM
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
     rubyzip (0.9.4)
-    sass (3.1.10)
-    sass-rails (3.1.4)
-      actionpack (~> 3.1.0)
-      railties (~> 3.1.0)
-      sass (>= 3.1.4)
-      sprockets (~> 2.0.0)
-      tilt (~> 1.3.2)
     selenium-webdriver (2.8.0)
       childprocess (>= 0.2.1)
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    sentient_user (0.3.2)
+    shoulda-matchers (1.0.0.beta3)
+    show_for (0.2.4)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.4)
+    stonepath (0.6.3)
+      aasm (>= 2.2.0)
+      activerecord (>= 3.0.0)
+      sentient_user (>= 0.3.2)
+    sunspot (1.2.1)
+      escape (= 0.0.4)
+      pr_geohash (~> 1.0)
+      rsolr (= 0.12.1)
+    sunspot_rails (1.2.1)
+      nokogiri
+      sunspot (= 1.2.1)
     term-ansicolor (1.0.7)
+    therubyracer (0.9.8)
+      libv8 (~> 3.3.10)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -160,6 +208,11 @@ GEM
       polyglot (>= 0.3.1)
     turn (0.8.3)
       ansi
+    twitter-bootstrap-rails (1.3.1)
+      actionpack
+      less
+      less-rails (~> 2.0.1)
+      railties
     tzinfo (0.3.30)
     uglifier (1.0.4)
       execjs (>= 0.3.0)
@@ -171,14 +224,29 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm
   coffee-rails (~> 3.1.1)
   cucumber
   cucumber-rails
+  delegate_presenter
+  formtastic
+  haml
+  high_voltage
   jquery-rails
+  kumade
+  less
+  mongrel (= 1.2.0.pre2)
   rails (= 3.1.1)
+  responders
   rspec-rails
   ruby-debug19
-  sass-rails (~> 3.1.4)
+  sentient_user
+  shoulda-matchers
+  show_for
   sqlite3
+  stonepath
+  sunspot_rails
+  therubyracer
   turn
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)

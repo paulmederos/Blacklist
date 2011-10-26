@@ -1,0 +1,33 @@
+<% content_for :header_text do %>
+  <h1>File a complaint</h1>
+  <p>We strive to empower the customer to force a response from businesses.</p>
+
+  <%= form_tag(businesses_path, :method => :get)  do |f| -%>
+  <%= search_field_tag :search, params[:search] -%>
+  <%= submit_tag "Search" -%>
+<%- end -%>
+
+<% end %>
+
+
+<h1>Listing businesses</h1>
+
+<div class="search_results">
+<ul>
+
+<% @businesses.each do |business_object| %>
+  <% business = Present(business_object) -%>
+  <li>
+    <div class="result">
+      <b><%= business.name -%></b><br /><%= business.full_address -%>
+      <%= business.complaint_button -%>
+      <br/><%= link_to 'More Information', business %>
+    </div>
+  </li>
+<% end %>
+</ul>
+</div>
+
+<br />
+
+<p><%= t("businesses.can_not_find") -%> <%= link_to t("businesses.add_new"), new_business_path %></p>

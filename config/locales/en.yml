@@ -3,3 +3,22 @@
 
 en:
   hello: "Hello world"
+  complaints:
+    index: Complaints
+    edit: "Edit Your Complaint"
+    show: "See Your Complaint"
+
+  businesses:
+    index: Businesses
+    edit: "Edit Business Information"
+    show: "See the businesses history"
+    new: "New Business"
+    can_not_find: "or, if you can't find the business"
+    add_new: "add it here"
+  complaints:
+    index: Complaints
+    edit: "Edit Complaint"
+    show: "View Complaint"
+    new: "Create Complaint"
+
+
