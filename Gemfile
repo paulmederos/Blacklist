@@ -32,6 +32,7 @@ gem 'sentient_user'
 gem 'stonepath'
 gem 'delegate_presenter'
 gem 'sunspot_rails'
+gem 'gmaps4rails'
 
 # ==================================================
 
