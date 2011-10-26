@@ -61,3 +61,7 @@ group :test do
   gem 'turn', :require => false
   gem 'shoulda-matchers'
 end
+
+group :production do
+  gem 'pg'
+end
