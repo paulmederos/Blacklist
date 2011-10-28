@@ -30,6 +30,7 @@ gem 'sentient_user'
 gem 'stonepath'
 gem 'delegate_presenter'
 gem 'sunspot_rails'
+gem 'gmaps4rails'
 
 # ==================================================
 
@@ -52,6 +53,7 @@ group :test, :development do
   gem 'therubyracer'
   gem 'mongrel', '1.2.0.pre2'
   gem 'sqlite3'
+  gem 'foreman'
 end
 
 
