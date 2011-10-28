@@ -15,6 +15,9 @@ en:
     new: "New Business"
     can_not_find: "or, if you can't find the business"
     add_new: "add it here"
+    header:
+      show_text: "About"
+      show_description: "Find more about this business and how it treats its customers"
   complaints:
     index: Complaints
     edit: "Edit Complaint"

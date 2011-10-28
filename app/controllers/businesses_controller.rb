@@ -17,6 +17,7 @@ class BusinessesController < ApplicationController
 
 
   def show
+    @json = business.to_gmaps4rails
     respond_with business
   end
 
