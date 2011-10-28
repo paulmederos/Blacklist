@@ -1,6 +1,12 @@
-= show_for business do |b|
-  = b.attribute :name
-  = b.attribute :street_address
-  = b.attribute :city
-  = b.attribute :state
-  = b.attribute :zip
+.b_info
+  %h2{class: "b_name"}
+    =business.name
+  %span{class: "addy b_street"}
+    =business.street_address
+  %span{class: "addy b_area"}
+    = Present(business).city_info
+  %span{class: "addy b_phone"}
+    = business.phone_number
+  %span{class:"addy b_twitter"}
+    = business.twitter
+

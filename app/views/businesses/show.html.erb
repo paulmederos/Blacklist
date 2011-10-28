@@ -1,13 +1,27 @@
+<% biz_presenter = Present(business) %>
+
 <% content_for :header_text do %>
-  <h1>Verify A Business</h1>
-  <p>Is this it? Let's make sure we've picked the right guys to blacklist.</p>
+  <h1><%= biz_presenter.header_text -%></h1>
+  <p><%= biz_presenter.header_description -%></p>
 <% end %>
 
 <p id="notice"><%= notice %></p>
 
-<%= our_gmaps4rails(@json) %>
+<div class="complaint_process clearfix">
+  <div style="height: 200px">
+    <%= render :partial => "attributes" -%>
+    <%= our_gmaps4rails(@json) %>
+  </div>
 
-<%= render :partial => "attributes" -%>
+  <%= biz_presenter.no_pledge -%>
+
+  <% if business.complaints.present? -%>
+
+   <% else %>
+    <%= biz_presenter.no_complaints -%>
+  <%- end -%>
+</div>
+
 
 <%= link_to 'Edit', edit_business_path(@business) %> |
 <%= link_to 'Back', businesses_path %>
